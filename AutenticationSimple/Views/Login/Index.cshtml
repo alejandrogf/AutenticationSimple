@@ -1,0 +1,21 @@
+﻿@model AutenticationSimple.Models.Usuario
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Formulario de registro</h2>
+@Html.ValidationSummary(false) @*Se pone false para que muestre TODOS los errores*@
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(obj=>obj.Login)
+    <br/>
+    @Html.EditorFor(obj => obj.Login)
+    <br />
+    @Html.LabelFor(obj => obj.Password)
+    <br />
+    @Html.PasswordFor(obj => obj.Password)
+    <br /><br />
+    <input type="submit" value="Acceder"/>
+}
